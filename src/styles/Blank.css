@@ -1,0 +1,13 @@
+.empty {
+  margin-left: 171px;
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.empty h1 {
+  color: #56B1A0;
+}

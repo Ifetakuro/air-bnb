@@ -1,0 +1,331 @@
+.container-body {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  min-height: 100vh;
+}
+main {
+  padding: 2rem;
+  flex: 3;
+  border: 1px solid #F0F0F0;
+}
+
+/* heading */
+.heading-div {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 2rem;
+}
+
+.heading-div h1 {
+  color: #2E2C2C;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 46px;  
+
+ }
+.search-div {
+  border: 1px solid #F0F0F0;
+  border-radius: 6px;
+  width: 254px;
+  height: 38px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 3px 9px;
+}
+
+.search-div input, .search-div .search-icon {
+  color: #C7C3C3;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.search-div input {
+  outline: none;
+  border: none;
+}
+
+.search-div input::placeholder { 
+  color: #C7C3C3;
+  opacity: 1; 
+}
+
+.search-div input:-ms-input-placeholder { 
+  color: #C7C3C3;
+}
+
+.search-div input::-ms-input-placeholder { 
+  color: #C7C3C3;
+}
+
+/* order track */
+.track-div {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.track-box {
+  width: 200px;
+  height: 74px;
+  box-shadow: 0px 2px 10px rgba(182, 182, 182, 0.25);
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+
+}
+
+
+.track-logo{
+  background: rgba(94, 126, 210, 0.2);
+  width: 35px;
+  padding: 9px 5px;
+  border-radius: 50%;
+  color: #5E7ED2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-logo img {
+  width: 20px;
+}
+
+.track-info p {
+  color: #6B6464;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.track-info span {
+  color: #000;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+/* basket section */
+
+.baskets-heading{
+  margin: 2rem 0 1rem;
+  display: flex;
+ justify-content: space-between;
+}
+
+.baskets-heading h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #020202;
+}
+
+.baskets-heading button {
+  background: #549A9A;
+  border-radius: 4px;
+  width: 130px;
+  height: 35px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.baskets-heading button:hover {
+  background: #4d8c8c;
+}
+
+/* Basket tab */
+.tabs {
+  display:flex;
+  gap: 1rem;
+  border-bottom: 2px solid #F0F0F0;
+
+}
+
+.tabs .tab {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #C0C0C0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: #56b1a0b6;
+  border-bottom: 2px solid #56b1a068;
+}
+
+.tab.active-tab {
+  color: #56B1A0;
+  border-bottom: 2px solid #56B1A0;
+}
+
+.tab-contents {
+  text-align: center;
+}
+
+.tab-content{
+  display: none;
+  margin-top: 3rem;
+}
+
+.tab-content.active-content{
+  display: block;
+}
+
+
+.tab-content .tab-logo {
+  width: 92px;
+  height: 89px;
+  display: inline-block;
+  background: rgba(84, 154, 154, 0.1);
+  border-radius: 50%;
+}
+
+.tab-content img {
+  margin: 1.3rem 0 2rem;
+}
+
+/* ASIDE BAR */
+.extra-aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 1rem 0;
+}
+
+
+.basket-extra{
+  padding: 1rem;
+  flex: 1;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.basket-extra h3{
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+  margin: 1rem 0;
+  
+}
+
+.basket-extra p {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: #AAA8A8;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading-div {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .heading-div h1 {
+    font-size: 1.5rem;
+
+  }
+
+  .search-div input, .search-div .search-icon { 
+    font-size: 12px;
+  }
+
+  .search-div {
+    gap: 5px;
+    width: 200px;
+    height: 38px;
+    padding: 0px 9px;
+  }
+
+  .tabs .tab {
+    font-size: 12px;
+  }
+  .baskets-heading {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .baskets-heading h3 {
+    font-size: 18px;
+  }
+  
+  .baskets-heading button {
+    width: 100px;
+    font-size: 10px;
+  }
+
+  .tab-content .tab-logo {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: rgba(84, 154, 154, 0.1);
+    border-radius: 50%;
+  }
+
+  .tab-logo img {
+    width: 2rem;
+    margin-top: 17px;
+  }
+
+  .track-div {
+    gap: 0.5rem;
+  }
+
+  .track-box {
+    width: 160px;
+    height: 70px;
+  }
+  
+  
+  .track-logo{
+    background: rgba(94, 126, 210, 0.2);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+  
+  .track-logo img {
+    width: 16px;
+  }
+  
+  .track-info p {
+    color: #6B6464;
+    font-size: 10px;
+  }
+  
+  .track-info span {
+    color: #000;
+    font-size: 18px;
+  }
+
+  .basket-extra{
+    padding: 0.5rem;
+  }
+  
+  .basket-extra h3{
+    font-size: 12px;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+}

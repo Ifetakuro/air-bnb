@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bbc9f910-d27f-47db-b87b-6214e8ea892e/deploy-status)](https://app.netlify.com/sites/magnificent-fairy-d3a367/deploys)
 
 ## About project
-Worked with react router and learnt state management while working on this projects
+Worked with react router and learnt state management while working on this project
 
 ## Available Scripts
 

@@ -41,21 +41,26 @@ const INITIAL_STATE = {
       qty: [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]
     },
   ],
-  currentItem: null
+  semiTotal: 0
 }
 
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
-    case actionTypes.CHANGE_QUANTITY:
-    return {
-      ...state,
-      products: state.products.map((item) =>
-        item.qty === action.payload.qty
-          ? { ...item, qty: +action.payload.qty}
-          : item
-      ),
-    }
+    case actionTypes.GET_SEMI_TOTAL:
+      return {
+        ...state,
+        semiTotal: action.semiTotal
+      }
+    // case actionTypes.CHANGE_QUANTITY:
+    // return {
+    //   ...state,
+    //   products: state.products.map((item) =>
+    //     item.qty === action.payload.qty
+    //       ? { ...item, qty: +action.payload.qty}
+    //       : item
+    //   ),
+    // }
     default:
       return state;
   }

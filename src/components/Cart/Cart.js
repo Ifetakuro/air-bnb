@@ -3,29 +3,41 @@ import {useState, useEffect} from 'react'
 import {FiArrowLeft} from 'react-icons/fi'
 import CartBtn from './CartBtn'
 import Products from './Products'
-import {connect} from 'react-redux'
-import {changeQuantity} from '../../shopping/shopping-action'
+import {useSelector} from 'react-redux'
 
-function Cart({products, cartClass, cartClick, changeQty}) {
+// import {getSemiTotal} from '../../shopping/shopping-action'
+
+
+function Cart({cartClass, cartClick}) {
+
+  const product = useSelector((state) => state.shop.products)
+  // const semiTotal = useSelector((state) => state.shop.semiTotal)
+  // const dispatch = useDispatch()
 
   const [input, setInput] = useState(0);
-
-  const onChangeHandler = (e) => {
-    setInput(e.target.value);
-    changeQty(e.target.value);
-  }
-  
   const [totalPrice, setTotalPrice] = useState(0)
+  // const [qty, setQty] = useState(0);
 
+
+  // const onChangeHandler = (quantity, e) => {
+  //   dispatch(getSemiTotal(e.target.value, quantity))
+    
+  //   setInput(e.target.value);
+  //   console.log('semitotal:',semiTotal)
+
+  // }
+  
   useEffect(() => {
     let price = 0;
-
-    products.forEach((item) => {
-      return price += parseInt(input) * parseInt(item.price);
+    
+    product.forEach((item) => {
+      
+      return price += item.qty[0] * item.price;
     })
-
+    
     setTotalPrice(price)
-  }, [input, setInput, products,totalPrice,setTotalPrice])
+  }, [input, setInput, product,totalPrice,setTotalPrice])
+ 
   
 
   return (
@@ -36,7 +48,7 @@ function Cart({products, cartClass, cartClick, changeQty}) {
           <h3>My Cart</h3>
           <CartBtn class={'cart-icon icon-active'}/>
         </div>
-        <Products onValue1={onChangeHandler}/>
+        <Products />
         <div className='total'>
           <div>
             <p className='total-p'>TOTAL</p>
@@ -52,19 +64,20 @@ function Cart({products, cartClass, cartClick, changeQty}) {
 }
 
 
-const mapStateToProps = state => {
-  return{
-    products: state.shop.products
-  }
-}
+// const mapStateToProps = state => {
+//   return{
+//     products: state.shop.products
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changeQty: (qty) => dispatch(changeQuantity(qty)),
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     changeQty: (qty) => dispatch(changeQuantity(qty)),
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps, null)(Cart);
+// export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default Cart
 
 
 

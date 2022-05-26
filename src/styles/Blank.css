@@ -1,5 +1,5 @@
 .empty {
-  margin-left: 150px;
+  margin-left: 170px;
   min-height: 100vh;
   
   display: flex;
@@ -10,4 +10,10 @@
 
 .empty h1 {
   color: #56B1A0;
+}
+
+@media screen and (max-width: 768px) {
+  .empty h1 {
+    font-size: 1.5rem;
+  }
 }

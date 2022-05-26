@@ -1,12 +1,12 @@
 import CartItem from './CartItem'
-import {connect} from 'react-redux'
+import {useSelector} from 'react-redux'
 import '../../styles/Cart.css'
 
-const Products = ({products, onValue1}) => {
- 
+const Products = ({onValue1}) => {
+ const product = useSelector((state) => state.shop.products)
   return (
     <div>
-      {products.map((prod) => {
+      {product.map((prod) => {
         return <CartItem key={prod.id} productData={prod} onValue={onValue1}/>
       })}
     </div>
@@ -15,10 +15,12 @@ const Products = ({products, onValue1}) => {
 
 
 
-const mapStateToProps = state => {
-  return{
-    products: state.shop.products
-  }
-}
+// const mapStateToProps = state => {
+//   return{
+//     products: state.shop.products
+//   }
+// }
 
-export default connect(mapStateToProps)(Products)
+// export default connect(mapStateToProps)(Products)
+
+export default Products

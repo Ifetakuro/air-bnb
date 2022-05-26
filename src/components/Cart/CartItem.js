@@ -15,7 +15,7 @@ function CartItem({productData, onValue}) {
           <p className="item-p">{productData.name}</p>
           <span className='item-span'>${productData.price}</span>
         </div>
-        <select name="kg" id="kg" onChange={onValue}>
+        <select name="kg" id="kg" onChange={(e) => onValue(productData.price, e)}>
           {productData.qty.map((q) => {
            return <option value={q} key={q}>{q}kg</option >
           })}

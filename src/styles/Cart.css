@@ -4,8 +4,8 @@
   height: 50px;
   border-radius: 50%;
   padding-top: 5px;
-  left: 70%;
-  bottom: 10%;
+  right: 30%;
+  top: 80%;
 
   background: #549A9A;
   box-shadow: -1px 3px 22px 3px rgba(141, 152, 152, 0.5);
@@ -30,8 +30,8 @@
 }
 
 .cart-icon.icon-active {
-  left: 80%;
-  bottom: 90%;
+  top: 1%;
+  right: 10%;
   color: #fff !important;
 }
 
@@ -187,5 +187,13 @@ select {
   }
   .cart-item {
     width: auto;
+  }
+
+}
+
+@media screen and (max-width: 598px) {
+  .cart-icon {
+    right: 10%;
+    top: 90%;
   }
 }

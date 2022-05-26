@@ -1,1 +1,1 @@
-export const CHANGE_QUANTITY = 'CHANGE_QUANTITY'
+export const GET_SEMI_TOTAL = 'GET_SEMI_TOTAL'

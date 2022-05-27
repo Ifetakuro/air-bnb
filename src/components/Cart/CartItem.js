@@ -19,13 +19,10 @@ function CartItem({productData, onValue}) {
           {productData.qty.map((q) => {
            return <option value={q} key={q}>{q}kg</option >
           })}
-          {/* <option value="2">{productData.qty}kg</option>
-          <option value="3">{productData.qty}kg</option>
-          <option value="4">{productData.qty}kg</option>
-          <option value="5">{productData.qty}kg</option> */}
         </select>
         <div className='letter'>
-          <p className={productData.class}>{productData.letter}</p>
+          <p className={productData.class[0]}>{productData.letter[0]}</p>
+          {productData.letter[1] && <p className={productData.class[1]}>{productData.letter[1]}</p>}
         </div>
       </div>
     </>

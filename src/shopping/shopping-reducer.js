@@ -9,8 +9,8 @@ const INITIAL_STATE = {
       name: 'Okazi Leaves ',
       image: coconut,
       price: 30,
-      letter: 'M',
-      class: 'letter-p color1',
+      letter: ['M'],
+      class: ['letter-p color1'],
       qty: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     },
     {
@@ -19,7 +19,7 @@ const INITIAL_STATE = {
       image: coconut,
       price: 120,
       letter: 'R',
-      class: 'letter-p color2',
+      class: ['letter-p color2'],
       qty: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     },
     {
@@ -27,8 +27,8 @@ const INITIAL_STATE = {
       name: 'Rice Bean Lea...',
       image: coconut,
       price: 50,
-      letter: 'M',
-      class: 'letter-p color3',
+      letter: ['M', 'P'],
+      class: ['letter-p color3', 'letter-p brown'],
       qty: [1, 2, 3, 4, 5, 6,7, 8, 9, 10]
     },
     {
@@ -36,8 +36,8 @@ const INITIAL_STATE = {
       name: 'Efo Stew Ingre...',
       image: coconut,
       price: 45,
-      letter: 'M',
-      class: 'letter-p color4',
+      letter: ['M'],
+      class: ['letter-p color4'],
       qty: [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]
     },
   ],

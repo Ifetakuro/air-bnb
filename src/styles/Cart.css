@@ -179,7 +179,10 @@ select {
   background: #0A1E3D;
 }
 
+.brown {
+  background: #D1B378;
 
+}
 
 @media screen and (max-width: 968px) {
   .cart-div {

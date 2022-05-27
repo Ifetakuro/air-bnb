@@ -18,7 +18,7 @@ function Baskets() {
 
   const hours = new Date().getHours()
   let greeting
-  if (hours === 0 && hours < 12) {
+  if (hours >= 0 && hours < 12) {
     greeting = 'Morning';
   } else if (hours >= 12 && hours < 16) {
     greeting = 'Afternoon'
